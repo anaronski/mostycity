@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:jms="http://www.springframework.org/schema/jms"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jms
+                           http://www.springframework.org/schema/jms/spring-jms.xsd
+                           http://activemq.apache.org/schema/core
+                           http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+	<bean id="currentApplication" class="pirate.mostycity.CurrentApplication">
+		<property name="appHome" value="${app.home}" />
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:/common.properties</value>
+			</list>
+		</property>
+		<!-- <property name="ignoreUnresolvablePlaceholders" value="true" /> -->
+	</bean>
+
+	<import resource="classpath*:/dispatcher.xml" />
+
+	<!-- JMS -->
+<!-- 	<bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory"> -->
+<!-- 		<property name="brokerURL"> -->
+<!-- 			<value>tcp://localhost:61616</value> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="destination" class="org.apache.activemq.command.ActiveMQQueue"> -->
+<!-- 		<constructor-arg value="pirate.mostycity.mainQueue" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate"> -->
+<!-- 		<property name="connectionFactory" ref="connectionFactory" /> -->
+<!-- 		<property name="defaultDestination" ref="destination" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<jms:listener-container connection-factory="connectionFactory"> -->
+<!-- 		<jms:listener destination="pirate.mostycity.mainQueue" ref="jmsListener" -->
+<!-- 			method="orderReceived" /> -->
+<!-- 	</jms:listener-container> -->
+
+</beans>

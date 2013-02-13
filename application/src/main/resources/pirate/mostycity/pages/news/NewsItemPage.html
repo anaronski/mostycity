@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+	
+<body>
+<wicket:extend>
+
+<div id="newsItemPage">
+	<div id="newsPanel">
+	<form wicket:id="newsItemForm">
+		<div wicket:id="feedback" class="feedback"></div>
+		<div class="title"><span wicket:id="newsItemTitle"/></div>
+		<div class="newsInfo"><wicket:message key="common.author"/><a wicket:id="authorLnk" class="grey">
+			<span wicket:id="author"/></a>&nbsp;&nbsp;&nbsp;
+			<span wicket:id="createTs"/>&nbsp;&nbsp;&nbsp; 
+			<span wicket:id="viewedCount"/>&nbsp;&nbsp;&nbsp;
+			<a wicket:id="lastUpdateAccountLnk" class="grey">
+			<span wicket:id="lastModAcc"/></a>
+		</div>
+		<div wicket:id="descPanel" style="overflow: hidden;">
+			<div>
+				<div class="newsItemImg">
+					<a wicket:id="linkToImage">
+						<img wicket:id="newsItemImage"/>
+					</a>
+				</div>
+				<div wicket:id="newsItemFullDesc"/>
+			</div>
+		</div>
+		<div class="underDesc">
+		<ul class="grey">
+			<li><a wicket:id="edit"><wicket:message key="common.edit"/></a></li>
+			<li><a wicket:id="delete" class="delete"><span style="margin-left: 15px;"><wicket:message key="common.delete"/></span></a></li>
+			<li><a wicket:id="onHome"><wicket:message key="news.onHome"/></a></li>
+			<li><a wicket:id="fromHome"><wicket:message key="news.fromHome"/></a></li>
+		</ul>
+		<div class="shareTools">
+			<span class='st_email'></span>
+			<span class='st_vkontakte' ></span>
+			<span class='st_odnoklassniki'></span>
+			<span class='st_facebook'></span>
+			<span class='st_twitter'></span>
+			<span class='st_livejournal'></span>
+		</div>
+		
+			<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+			<div class="yashare-auto-init " data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj"></div> 
+		</div>
+	</form>
+	</div>
+	<span id="commentsPanel" wicket:id="commentsPanel"/>
+</div>
+</wicket:extend>
+</body>
+</html>

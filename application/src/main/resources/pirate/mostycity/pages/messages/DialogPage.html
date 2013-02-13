@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+<!-- 	<script type="text/javascript" src="js/amq_jquery_adapter.js"></script> -->
+	<script type="text/javascript" src="js/amq.js"></script>
+</head>
+<body>
+<wicket:extend>
+
+	<script type="text/javascript">
+
+		function scrol() {
+			var elem = document.getElementById('messagesHistory');
+	 		  elem.scrollTop = elem.scrollHeight;
+	 		 $('#messageTxtTA').focus();
+		}
+		
+		$(document).ready(function(){
+			scrol();
+			
+			var elems = $('.messagesHistoryListView').size();
+			
+			setInterval(function() {
+		 		  var elem = $('.messagesHistoryListView').size();
+		 		  if(elem != elems){
+		 			  scrol();
+		 			  elems = elem;
+		 		  }
+		 		}, 50);
+			
+			
+		});
+	</script>
+	<div id="messagePage">
+<!--		<div wicket:id="feedback" class="feedback"></div>-->
+		<form wicket:id="messagesHistoryListForm">
+			<div id="messagesHistory" class="messagesHistory">
+				<div wicket:id="listViewContainer">
+				<div wicket:id="messagesHistoryListView" class="messagesHistoryListView">
+					<table width="100%"> 
+						<tr>
+							<td width="100%">
+								<div>
+									<div wicket:id="underMessage" class="underMessage">
+										<span class="date" wicket:id="createTs"/>
+										<span><a class="deleteLnk delete" wicket:id="deleteLnk"><span style="padding-left: 15px;"></span></a></span>
+									</div>
+									<a wicket:id="authorLnk"><span style="font-weight: bold;" wicket:id="author"/></a>
+									<span wicket:id="messageDesc"/>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="noMessages"><span wicket:id="noMessagesLabel"/></div>
+				</div>
+			</div>
+<!-- 			<div wicket:id="pagingNavigator" class="center"/> -->
+			<div>
+				<div style="float: left; margin-top: 5px;">
+					<a wicket:id="authorLnk1"><img wicket:id="avatar" alt="" class="avatar"/></a>
+				</div>
+				<div>
+<!-- 					<div><wicket:message key="messages.messageTo" style="margin-left: 20px;"/><a wicket:id="authorLnk"><span wicket:id="author"></span></a></div> -->
+					<span  wicket:id="sendMessagePanel"></span>
+				</div>
+			</div>
+		</form>
+	</div>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:panel>
+<div id="votingPanel">
+	<div class="votingsListView" wicket:id="votingsListView"> 
+			<table>
+			<tr>
+				<td><div><input type="radio" wicket:id="votingChoice"/></div></td>
+				<td width="300px">
+					<div class="question"><span wicket:id="votingName"/></div>
+					<div wicket:id="votingVariantRadioGroup">
+						<div wicket:id="votingVariantListView"> 
+							<input type="radio" wicket:id="votingVariantChoice"/>
+							<span wicket:id="votingVariantName"/><span wicket:id="votingResult"/>
+						</div>
+					</div>
+				</td>
+				<td class="voting_info">
+					<div><span wicket:id="answersCount"/></div>
+					<div><span wicket:id="votingId"/></div>
+					<div><span wicket:id="createTs"/></div>		
+					<div><span wicket:id="votingStatus"/></div>				
+				</td>
+			</tr>
+			</table>
+	</div>
+	<div wicket:id="pagingNavigator" style="padding-left: 50px"/>
+	<div class="btns">
+		<input type="submit" wicket:id="activateBtn" class="green_btn" value="Activate"/>
+<!--		<input type="submit" wicket:id="deactivateBtn" class="green_btn" value="Deactivate"/>-->
+		<input type="submit" wicket:id="deleteBtn" class="green_btn" value="Delete"/>
+	</div>
+</div>
+</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:extend>
+	<div id="messagesListPage">
+<!--		<div wicket:id="feedback" class="feedback"></div>-->
+		<form wicket:id="messagesListForm">
+			<div wicket:id="messagesListView" style="position: relative;" class="dialog">
+			<a class="messageLnk" wicket:id="linkToDialog"/>
+			<table width="100%">
+				<tr>
+					<td align="center" valign="top">
+						<div class="smallAvatar"><img wicket:id="avatar"/></div>
+					</td>
+					<td width="100%">
+						<div>
+							<div wicket:id="underMessage" class="underMessage">
+								<span class="date" wicket:id="createTs"/>
+							</div>
+							<span style="color: #006600; font-weight: bold;" wicket:id="author"/>
+							<span wicket:id="messageDesc" class="messageDesc"/>
+							
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="deleteDiv"><a class="deleteLnk delete" wicket:id="deleteLnk"></a></div>
+			</div>
+			<div class="noMessages"><span wicket:id="noMessagesLabel"/></div>
+			<div wicket:id="pagingNavigator" class="center"/>
+		</form>
+	</div>
+</wicket:extend>
+</body>
+</html>

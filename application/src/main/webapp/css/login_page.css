@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+.loginPanel {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+#leftPanel .loginPanel {
+	width: 250px;
+}
+.loginPanel .btn {
+	width: 250px;
+	margin: 0 auto;
+	text-align: right;
+}
+#forgetPasswordPage .loginPanel .btn {
+	width: 180px;
+	margin: 0 auto;
+	text-align: left;
+}
+#leftPanel .loginPanel .btn {
+	width: 190px;
+	margin: 0 auto;
+	text-align: left;
+}
+*+html #leftPanel .loginPanel .btn {
+	width: 194px;
+}
+
+#leftPanel .loginPanel input[type="text"], #leftPanel .loginPanel input[type="password"] {
+	width: 150px \ ;
+	width: 150px;
+}
+
+#loginPage .loginPanel input[type="text"], #loginPage .loginPanel input[type="password"],
+	#forgetPasswordPage .loginPanel input[type="text"], #forgetPasswordPage .loginPanel input[type="password"] {
+	width: 200px;
+}
+.loginPanel label {
+	padding-bottom: 5px;
+	color: #003300;
+	font-weight: bold;
+	opacity: 0.8;
+}
+#loginPage .loginPanel table{
+	padding-top: 20px;
+}

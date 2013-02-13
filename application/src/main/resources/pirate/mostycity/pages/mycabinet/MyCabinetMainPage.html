@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:extend>
+	<div id="myCabinetPage">
+		<div><wicket:child /></div>
+		<div id="myCabinetMenu">
+			<ul class="dropdown headerMenu">
+				<li><a wicket:id="accInfoLnk"><span><wicket:message key="myCabinet.menu.accountInfo"/></span></a></li>
+				<li>
+					<a wicket:id="updateAccLnk"><span><wicket:message key="myCabinet.menu.editAcc"/></span></a>
+					<ul class="secondLevel">
+						<li><a wicket:id="changeAvatarLnk"><span><wicket:message key="myCabinet.menu.changeAvatar"/></span></a></li>
+						<li><a wicket:id="changePasswordLnk"><span><wicket:message key="myCabinet.menu.changePass"/></span></a></li>
+						<li><a wicket:id="deleteAccLnk"><span><wicket:message key="myCabinet.menu.deleteAcc"/></span></a></li>
+					</ul>
+				</li>
+				<li><a wicket:id="newsByAccountLnk"><span><wicket:message key="myCabinet.menu.myNews"/></span></a></li>
+				<li class="last">
+					<a wicket:id="messagesLnk"><span><wicket:message key="myCabinet.menu.messages"/></span></a>
+<!-- 					<ul class="secondLevel"> -->
+<!-- 						<li><a wicket:id="newMessagesLnk"><span><wicket:message key="myCabinet.menu.messages.new"/></span></a></li> -->
+<!-- 						<li><a wicket:id="incommingMessagesLnk"><span><wicket:message key="myCabinet.menu.messages.incoming"/></span></a></li> -->
+<!-- 						<li><a wicket:id="sentMessagesLnk"><span><wicket:message key="myCabinet.menu.messages.sent"/></span></a></li> -->
+<!-- 					</ul> -->
+				</li>
+			</ul>
+		</div>
+	</div>
+</wicket:extend>
+</body>
+</html>

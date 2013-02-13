@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+#confirmRegistrationPage {
+	max-width: 600px;
+	margin: 30px auto;
+	padding-top: 30px;
+	border: 1px solid;
+}
+.registrationPanel {
+	max-width: 530px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.registrationPanel .btn {
+	width: 205px;
+	margin: 0 auto;
+}
+.registrationPanel .dataFields .dataField div {
+	height: 50px;
+}
+.registrationPanel .dataFields div.loginCont {
+	height: 120px;
+	padding: 0px !important;
+}
+.secondColl {
+	vertical-align: top;
+	position: absolute;
+	right: 5px;
+}
+.registrationPanel label {
+	padding-bottom: 5px;
+	color: #003300;
+	font-weight: bold;
+	opacity: 0.8;
+}
+.registrationPanel .dataFields input[type="text"], .registrationPanel .dataFields input[type="password"] {
+	width: 200px;
+}
+
+.registrationPanel .dataFields {
+	min-height: 300px;
+}

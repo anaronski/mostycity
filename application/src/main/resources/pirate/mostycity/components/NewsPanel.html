@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:panel>
+<div id="newsPanel">
+	<form wicket:id="newsForm">
+		<div class="newsListView" wicket:id="newsListView">
+			<div class="title"><a wicket:id="newsItemLink"><span wicket:id="newsItemTitle"/></a></div>
+			<div class="newsInfo"><wicket:message key="common.author"/> <a wicket:id="authorLnk" class="grey">
+				<span wicket:id="author"/></a>&nbsp;&nbsp;&nbsp; 
+				<span wicket:id="createTs"/>&nbsp;&nbsp;&nbsp;
+				<span wicket:id="viewedCount"/>
+			</div>
+			<div style="overflow: hidden;">
+				<div class="newsItemImg" wicket:id="newsItemImage"/>
+				<div wicket:id="newsItemDesc"/>
+			</div>
+			<div class="underDesc">
+				<a class="grey topBorder" wicket:id="commentsLink"><span wicket:id="commentsCount"></span></a>
+			</div>
+		</div>
+		<div wicket:id="pagingNavigator" class="center"/>
+	</form>
+</div>
+</wicket:panel>
+</body>
+</html>

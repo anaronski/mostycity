@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+<wicket:extend>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var e = $('#aemail span').text();
+		$('#aemail').attr('href', 'mailto:'+e);
+	});
+</script>
+<div id="accountInfoPage">
+	<div>
+		<div wicket:id="feedback" class="feedback"></div>
+		<form wicket:id="accountForm">
+		<div>
+			<div class="rightDiv" align="center" valign="top">
+				<div class="bigAvatar"><img wicket:id="avatar"></img></div>
+			</div>
+			<div class="leftDir">
+				<div class="login"><a wicket:id="newMessageLnk" title="send message"><span wicket:id="login"/></a></div>
+				<div class="grey">
+					<span><wicket:message key="common.status"/> </span><span wicket:id="status"/>&nbsp;&nbsp;&nbsp;
+<!-- 					<span wicket:id="status"/>&nbsp;&nbsp;&nbsp; -->
+					<span wicket:id="type"/>&nbsp;&nbsp;&nbsp;
+					<span wicket:id="newsCount"/>&nbsp;&nbsp;&nbsp;
+					<span wicket:id="accountId"/>
+				</div>
+				<div>
+					<span class="label" wicket:id="firstNameLabel"/><span wicket:id="firstName"/><br/>
+					<span class="label" wicket:id="lastNameLabel"/><span wicket:id="lastName"/>
+				</div>
+				<div wicket:id="accountInfoPanel">
+					<span class="label"><wicket:message key="common.sex"/>: </span><span wicket:id="sex"/><br/>
+					<span class="label"><wicket:message key="common.email"/>: </span><a id="aemail" href="#"><span wicket:id="email"/></a><br/>
+					<span class="label" wicket:id="aimLabel"/><span wicket:id="aim"/><br/>
+					<span class="label" wicket:id="isqLabel"/><span wicket:id="isq"/><br/>
+					<span class="label" wicket:id="skypeLabel"/><span wicket:id="skype"/><br/>
+					<span class="label" wicket:id="vkontakteLabel"/><span wicket:id="vkontakte"/><br/>
+					<div wicket:id="userAuthPanel" class="grey">
+						<wicket:message key="common.password"/>: <span wicket:id="password"/>
+					</div>
+				</div>
+			</div>
+			<div wicket:id="editButtons" class="editButtons">
+				<ul>
+					<li><a wicket:id="activateBtn"><wicket:message key="accountInfo.activate"/></a></li>
+					<li><a wicket:id="deactivateBtn"><wicket:message key="accountInfo.deactivate"/></a></li>
+					<li><a wicket:id="editBtn"><wicket:message key="common.edit"/></a></li>
+					<li><a wicket:id="deleteBtn" class="delete"><span style="margin-left: 15px;"><wicket:message key="common.delete"/></span></a></li>
+				</ul>
+			</div>
+			</div>
+		</form>
+	</div>
+</div>
+</wicket:extend>
+</body>
+</html>

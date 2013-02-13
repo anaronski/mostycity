@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:panel>
+<div id="commentsPanel">
+<form wicket:id="commentsForm">
+	<div wicket:id="showAllCommentsContainer" class="showAllComments">
+		<a id="commentsCountLink" wicket:id="showAllCommentsLink">
+			<div>Show All <span wicket:id="commentsCount"></span> comments</div>
+		</a>
+	</div>
+	<div class="commentsInfo" wicket:id="commentsListView">
+		<table>
+		<tr>
+			<td align="center" valign="top">
+				<div class="smallAvatar"><a wicket:id="authorLnk1"><img wicket:id="avatar"/></a></div>
+			</td>
+			<td>
+				<div><a wicket:id="authorLnk">
+					<span wicket:id="author"/></a>
+					<span wicket:id="commentItemDesc"/>
+					<div class="date"><span class="date" wicket:id="createTs"/><span><a class="deleteLnk delete" wicket:id="deleteLnk"><span style="margin-left: 15px;">delete</span></a></span></div>
+				</div>
+				
+			</td>
+		</tr>
+		</table>
+	</div>
+	<div class="noComments"><span wicket:id="noCommentsLabel"/></div>
+	<div class="center">
+		<textarea rows="4" wicket:id="commentItemTxtTA" id="commentStr"></textarea>
+		<input type="submit" wicket:id="addNewCommentBtn" class="send_btn top" value="Send"/>
+	</div>
+<!-- 	<div wicket:id="pagingNavigator" class="center"/> -->
+</form>
+</div>
+</wicket:panel>
+</body>
+</html>

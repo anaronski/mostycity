@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:panel>
+<div id="welcomePanel">
+<table>
+	<tr>
+		<td>
+		<div class="smallAvatar">
+			<a title="change avatar" wicket:id="changeAvatarLnk"><img wicket:id="avatar1" /></a>
+		</div>
+		</td>
+		<td>
+			<div><span wicket:id="userName" /></div>
+			<div class="newMessagesCount"><a class="messagesLnk" wicket:id="messagesLnk"><wicket:message key="welcome.newMessages"/><span wicket:id="newMessCount"></span></a></div>
+		</td>
+	</tr>
+</table>
+</div>
+</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>pirate.mostycity</groupId>
+	<artifactId>mostycity</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>MostyCity Project</name>
+	<packaging>pom</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+		<pirate.mostycity.version>1.0-SNAPSHOT</pirate.mostycity.version>
+		<org.apache.wicket.version>1.5.8</org.apache.wicket.version>
+		<hibernate.version>3.5.4-Final</hibernate.version>
+
+		<activemqVersion>5.4.3</activemqVersion>
+	</properties>
+	<modules>
+        <module>dataprovider-api</module>
+        <module>dataprovider-impl</module>
+		<module>application</module>
+    </modules>
+
+</project>

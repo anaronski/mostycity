@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+<wicket:extend>
+<div id="loginPage">
+<div wicket:id="feedback" class="feedback"></div>
+	<div wicket:id="loginPanel" class="loginPanel">
+	<span><wicket:message key="common.notRegister"/> <a wicket:id="registrationBtn"><wicket:message key="common.registerNow"/></a></span>
+		<form method="post" wicket:id="loginForm">
+			<table>
+				<tr>
+					<td>
+						<div class="right"><label><wicket:message key="common.Login"/></label></div>
+						<div class="right"><label><wicket:message key="common.password"/></label></div>
+					</td>
+					<td>
+						<div><input type="text" wicket:id="login"></input></div>
+						<div><input type="password" wicket:id="password"></input></div>
+					</td>
+				</tr>
+			</table>
+			<div class="btn">
+				<div><input type="submit" wicket:id="loginBtn" class="green_btn" value="Submit"></input> 
+<!--					<a wicket:id="registrationBtn" class="green_btn">Registration</a>-->
+					<a wicket:id="forgetBtn" class="grey"><wicket:message key="common.forgetPassword"/></a>
+				</div>
+				<div></div>
+			</div>
+		</form>
+	</div>
+</div>
+</wicket:extend>
+</body>
+</html>

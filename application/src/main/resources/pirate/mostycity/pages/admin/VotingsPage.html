@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+<wicket:extend>
+<div id="votingsPage">
+<div wicket:id="feedback" class="feedback"></div>
+<table width="100%"><tr style="vertical-align: top;"><td width="50%">
+<form wicket:id="votingsForm">
+	<div wicket:id="votingRadioGroup">
+		<span wicket:id="votingsListPanel"/>
+	</div>
+</form>
+</td><td wicket:id="addNewVotingPanel">
+<form wicket:id="newVotingForm">
+	<div class="newVotingForm">
+		<div>
+			<span class="question"><wicket:message key="votingPage.question"/></span><br/>
+			<input class="questionTF" type="text" wicket:id="question"/>
+			<a wicket:id="setVotingName" class="green_btn">Add question</a>
+		</div> 
+	</div>
+</form>
+<form wicket:id="newVariantForm">
+	<div class="newVariantForm">
+		<div>
+			<span class="question"><wicket:message key="votingPage.variant"/></span><br/>
+			<input class="questionTF" type="text" wicket:id="answer"/>
+			<a wicket:id="addNewVariant" class="green_btn">Add variant</a>
+		</div>
+	</div>
+</form>
+<div class="previewNewVoting" wicket:id="previewNewVoting">
+	<div class="preview"><span><wicket:message key="common.preview"/></span></div>
+	<div><span class="question" wicket:id="newVotingName"></span></div>
+	<div wicket:id="votingVariantRadioGroup">
+		<div wicket:id="newVotingVariantListView"> 
+			<input type="radio" wicket:id="votingVariantChoice"/>
+			<a wicket:id="newVariantLink"><span wicket:id="votingVariantName"></span></a>
+		</div>
+	</div>
+	<div class="btns"><a class="green_btn" wicket:id="addNewVoting"><wicket:message key="votingPage.addNewVoting"/></a></div>
+</div>
+</td></tr></table>
+</div>
+</wicket:extend>
+</body>
+</html>

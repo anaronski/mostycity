@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+#newsItemUpdatePanel {
+	width: 90%;
+	max-width: 750px;
+	margin: 0 auto;
+	position: relative;
+}
+#newsItemUpdatePanel label {
+	padding-bottom: 5px;
+	color: #003300;
+	font-weight: bold;
+}
+#newsItemUpdatePanel input[type="text"] {
+	width: 100%;
+	border: 1px solid #99CC99; 
+}
+#newsItemUpdatePanel textarea {
+	border: 1px solid #99CC99; 
+	width: 100%
+}
+
+#newsItemUpdatePanel img {
+	max-width: 100%;
+	max-height: 200px;
+}
+
+html>body #newsItemUpdatePanel img {
+/* 	width: 100%; */
+}
+
+#newsItemUpdatePanel .messImageDiv {
+	position: relative;
+	display: inline-block;
+}
+
+#newsItemUpdatePanel .messImageDiv a {
+	background: url("images/cross.gif") no-repeat scroll 0 0 transparent;
+    padding: 8px;
+    position: absolute;
+    right: 7px;
+    top: 8px;
+}
+.fileInputDiv {
+	display:none;
+}
+
+/* #uploadForm { */
+/* 	width: 230px; */
+/* 	margin: 0 auto; */
+/* 	position: relative;	 */
+/* 	display: none; */
+/* } */
+/* #uploadForm #fakeUpload { */
+/* 	border: 1px solid #99CC99;  */
+/* 	width: 215px; */
+/* } */
+/* #uploadForm #upload { */
+/* /* 	border: 1px solid #99CC99;  */ */
+/* 	position: relative; */
+/* 	text-align: right; */
+/* 	-moz-opacity:0 ; */
+/* 	filter:alpha(opacity: 0); */
+/* 	opacity: 0; */
+/* 	z-index: 2; */
+/* } */
+
+/* #uploadForm div.fileinputs { */
+/* 	position: relative; */
+/* } */
+
+#uploadForm div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+
+#content #newsItemUpdatePanel #rich div {
+	padding: 0px;
+}

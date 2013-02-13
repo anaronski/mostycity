@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel=stylesheet href="css/main.css" type="text/css" media="screen" />
+	<link rel=stylesheet href="css/registration.css" type="text/css" media="screen" />
+</head>
+<body>
+<wicket:panel>
+	<div wicket:id="feedback" class="feedback"></div>
+	<div class="registrationPanel">
+		<form wicket:id="registrationForm">
+			<div class="dataFields">
+					<div class="secondColl dataField">
+						<div><label><wicket:message key="common.email"/><span class="star">*</span></label><br/><input type="text" wicket:id="email"></input></div>
+						<div><label><wicket:message key="common.skype"/></label><br/><input type="text" wicket:id="skype"></input></div>
+						<div><label><wicket:message key="common.isq"/></label><br/><input type="text" wicket:id="isq"></input></div>
+						<div><label><wicket:message key="common.aim"/></label><br/><input type="text" wicket:id="aim"></input></div>
+						<div><label><wicket:message key="common.vkontakte"/></label><br/><input type="text" wicket:id="vkontakte"></input></div>
+					</div>
+					<div class="dataField">
+						<div><label><wicket:message key="common.Login"/><span class="star">*</span></label><br/><input type="text" wicket:id="login"></input></div>
+						<div wicket:id="loginCont" class="loginCont">
+							<div><label><wicket:message key="common.password"/><span class="star">*</span></label><br/><input type="password" wicket:id="password"></input></div>
+							<div><label><wicket:message key="common.confPassword"/><span class="star">*</span></label><br/><input type="password" wicket:id="passwordConfirm"></input></div>
+						</div>
+						<div><label><wicket:message key="common.fName"/></label><br/><input type="text" wicket:id="firstName"></input></div>
+						<div><label><wicket:message key="common.lName"/></label><br/><input type="text" wicket:id="lastName"></input></div>
+						<div><label><wicket:message key="common.sex"/><span class="star">*</span></label><br/>
+							<span wicket:id="sexGroup">
+								<input name="sex" value="1" checked="checked" type="radio" wicket:id="1"><wicket:message key="sex.male"/></input>
+								<input name="matchType" value="2" type="radio" wicket:id="2"><wicket:message key="sex.female"/></input>
+							</span>
+						</div>
+					</div>
+			</div>
+			<div class="btn">
+				<div>
+					<input type="submit" wicket:id="registerBtn" class="green_btn" value="Register"/>
+				 	<a wicket:id="cancelBtn" class="green_btn"><wicket:message key="common.button.cancel"/></a>
+				 	<input type="submit" wicket:id="updateBtn" class="green_btn" value="Update"/>
+				 </div>
+			</div>
+		</form>
+	</div>
+</wicket:panel>
+</body>
+</html>

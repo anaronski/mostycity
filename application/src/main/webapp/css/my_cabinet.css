@@ -1,0 +1,196 @@
+@CHARSET "UTF-8";
+
+
+#myCabinetPage {
+	position: relative;
+	margin-top: 20px;
+}
+
+
+#myCabinetPage li {
+	float: left;
+/*	padding: 5px 15px;*/
+}
+#myCabinetMenu {
+	min-width: 500px;
+	position: absolute;
+}
+#myCabinetMenu ul {
+	text-align: left;
+	margin-left: -35px;
+}
+#myCabinetMenu li a:focus, #myCabinetMenu li a:hover {
+	text-decoration: none;
+	color: #003300 !important;
+	text-shadow: 0 0 2px #FFFFFF;
+}
+#myCabinetMenu li a:link, #myCabinetMenu li a:visited {
+	color: #003300;
+	text-shadow: 0 0 2px #FFFFFF;
+}
+#myCabinetMenu ul.secondLevel {
+	margin-top: 8px;
+	position: absolute;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	background-color: white;
+	border-bottom: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	margin-left: 7px;
+}
+*+html #myCabinetMenu ul.secondLevel {
+	margin-left: -120px;
+	margin-top: 25px;
+}
+#myCabinetMenu .secondLevel li{
+	float:none;
+	padding: 5px 3px;
+	margin-left: 0px;
+}
+#accountInfoPage table {
+	width: 100%;
+}
+#accountInfoPage .bigAvatar {
+	width: 300px;
+}
+#accountInfoPage .login {
+	color: #006600;
+	font-size: 20px;
+	font-weight: bold;
+}
+#accountInfoPage .grey {
+	color: #999999;
+	font-size: 12px;
+}
+#accountInfoPage .label {
+	color: #003300;
+	font-weight: bold;
+}
+#accountInfoPage .editButtons ul {
+	border-top: 1px solid gray;
+	padding-bottom: 30px;
+	padding-left: 0;
+	display: inline-block;
+}
+#accountInfoPage .editButtons ul a {
+	margin: 0 10px; 
+}
+#confirmDeletePage {
+	max-width: 600px;
+	min-width: 430px;
+	margin: 30px auto 0;
+	padding-top: 30px;
+	border: 1px solid;
+}
+/* #changePasswordPage { */
+/* 	width: 700px; */
+/* 	margin: 0 auto; */
+/* } */
+#changePasswordPage .changePasswordForm {
+	width: 290px;
+	margin: 0 auto;
+}
+#changePasswordPage label {
+	padding-bottom: 5px;
+	color: #003300;
+	font-weight: bold;
+}
+#changePasswordPage input[type="password"] {
+	width: 240px;
+	border: 1px solid #99CC99;
+}
+*+html #changePasswordPage input[type="submit"] {
+	padding: 3px 0px;
+}
+#changePasswordPage .changePasswordForm div {
+	padding-top: 10px;
+}
+#changeAvatarPage input[type="file"]{
+	border: 1px solid #99CC99;
+}
+#messagesListPage .noMessages, #messagePage .noMessages {
+	color: #999999;
+	font-style: italic;
+	padding-top: 30px;
+	text-align: center;
+}
+#messagesListPage .date, #messagePage .date {
+	font-size: 12px;
+	color: #999999;
+	font-style: italic;
+	padding-right: 10px;
+	margin-left: 30px;
+}
+#messagesListPage .deleteLnk{
+	color: #999999;
+	padding-left: 15px;
+}
+
+#messagePage .deleteLnk {
+	color: #999999;
+	padding-left: 5px;
+}
+#messagePage div.deleteDiv, #messagesListPage div.deleteDiv {
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+#messagesListPage a.messageLnk:LINK {
+	color: black !important;
+	text-decoration: none;
+	z-index: 99;
+}
+#messagesListPage .underMessage {
+	background-color: #FFFFFF;
+	background: url("images/message.png") no-repeat 0 0 transparent;
+	float: right;
+	margin: -5px 25px;	
+}
+#messagesListPage .underMessage.incomming {
+	background-position: 0 0;
+}
+#messagesListPage .underMessage.sent {
+	background-position: 0 -30px;
+}
+#messagesListPage .underMessage.new {
+	background-position: 0 -65px;
+}
+#messagesListPage .dialog.new {
+	background-color: #effaf5;
+}
+#messagePage .messagesHistory{
+	max-height: 400px;
+    overflow: auto;
+}
+#messagePage .underMessage {
+	float: right;
+	margin: -5px 0px;
+}
+#messagePage .underMessage .date {
+	margin-left: -5px;
+}
+#messagePage textarea {
+	border: 1px solid #99CC99;
+    height: 80px !important;
+    margin-left: 20px;
+    min-width: 200px !important;
+    resize: none;
+    width: 47%;
+}
+
+#messagePage #sendMessageFormPanel {
+	float: left;
+}
+
+#messagesListPage .dialog {
+	cursor: pointer;
+}
+#messagesListPage .dialog.hover {
+	background-color: #EDF1F5;
+}
+#messagesListPage .messageDesc p{
+	max-height: 5em;
+	overflow: hidden;
+}

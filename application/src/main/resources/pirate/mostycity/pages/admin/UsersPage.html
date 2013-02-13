@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<body>
+<wicket:extend>
+<div id="usersPage">
+<div wicket:id="feedback" class="feedback"></div>
+<form wicket:id="usersForm">
+	<table>
+		<tr class="head">
+			<td>select</td>
+			<td>login</td>
+			<td>type</td>
+			<td>status</td>
+			<td>created</td>
+			<td>last login</td>
+			<td>sex</td>
+			<td>e-mail</td>
+		</tr>
+		<tbody wicket:id="accountRadioGroup">
+		<tr wicket:id="usersListView">
+			<td><input type="radio" wicket:id="userChoice"/></td>
+			<td><a wicket:id="loginLnk"><span wicket:id="login"/></a></td>
+			<td><span wicket:id="type"/></td>
+			<td><span wicket:id="status"/></td>
+			<td><span wicket:id="createTs"/></td>
+			<td><span wicket:id="lastLoginTs"/></td>
+			<td><span wicket:id="sex"/></td>
+			<td><span wicket:id="email"/></td>
+		</tr>
+		</tbody>
+	</table>
+	<div>
+		<input type="submit" class="green_btn" wicket:id="deactivate" value="Deactivate"/>
+		<input type="submit" class="green_btn" wicket:id="activate" value="Activate"/>
+		<input type="submit" class="green_btn" wicket:id="delete" value="Delete"/>
+	</div>
+	<div></div>
+</form>
+</div>
+</wicket:extend>
+</body>
+</html>

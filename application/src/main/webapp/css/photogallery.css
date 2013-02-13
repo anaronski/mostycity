@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+#photogalleryPage #lightBox img{
+	max-height: 150px;
+	max-width: 170px;
+}
+#photogalleryPage #rightContent {
+/* 	margin-left: 300px;	 */
+}
+#lightBox a:LINK, #galleryPanel a:LINK {
+	color: #fff !important;
+}

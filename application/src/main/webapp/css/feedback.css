@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.feedbackulERROR {
+	color: #FF6A6A;
+	font-weight: bold;
+	text-align: center;
+}
+.feedbackulINFO {
+	color: #009ACD;
+	text-align: center;
+	font-weight: bold;
+}

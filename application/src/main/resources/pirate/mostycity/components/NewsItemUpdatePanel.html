@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+<body>
+<wicket:panel>
+	<div wicket:id="feedback" class="feedback"></div>
+	<div id="newsItemUpdatePanel">
+		<form class="uploadForm" wicket:id="newsItemUpdateForm">
+			<div>
+				<label><wicket:message key="common.title"/><span class="star">*</span></label><br/>
+				<input type="text" wicket:id="newsItemTitle"></input>
+			</div>
+			<div>
+				<label><wicket:message key="news.content"/><span class="star">*</span></label><br/>
+				<textarea rows="10" wicket:id="newsItemDescTA"></textarea>
+			</div>
+			<div wicket:id="messImageDiv" class="messImageDiv">
+				<img wicket:id="messImage"/>
+				<a wicket:id="deleteMessImage"></a>
+			</div>
+			<div class="btn">
+				<div>
+					<input type="submit" wicket:id="addNewBtn" class="green_btn" value="Submit"/>
+				 	<input type="submit" wicket:id="updateBtn" class="green_btn" value="Update"/>
+				 	<a class="green_btn" id="imageBtn" href="#"><wicket:message key="news.button.addImage"/></a>
+				 	<a wicket:id="cancelBtn" class="green_btn"><wicket:message key="common.button.cancel"/></a>
+				 </div>
+			</div>
+			<div class="fileInputDiv"><input type="file" wicket:id="fileUpload" id="upload" onchange="submitForm();" class="fileInput"/></div>
+		</form>
+	</div>
+</wicket:panel>
+</body>
+</html>

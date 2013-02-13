@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<project default="build_web" basedir=".">
+	<echo message="start build" />
+
+	<echo message="pulling in property files" />
+	<property file="build.properties" />
+	<import file="variables.xml" />
+
+	<target name="build_dpl_impl"  depends="build_dpl_api">
+		<echo message="start build dpl impl" />
+		<mkdir dir="${build_classes}" />
+
+		<echo message="compile" />
+		<javac destdir="${build_classes}" debug="true">
+			<classpath refid="class_path" />
+			<src path="${dpl_impl_path}" />
+		</javac>
+
+		<echo message="build jar" />
+		<jar destfile="${build}/mostycity-dpl-impl.jar">
+			<fileset dir="${build_classes}">
+				<include name="**/*.class" />
+				<include name="**/*.xml" />
+			</fileset>
+		</jar>
+		<delete dir="${build_classes}" />
+		<echo message="end build dpl impl" />
+	</target>
+
+	<target name="build_dpl_api">
+		
+		<delete dir="${build}" />
+		<mkdir dir="${build}" />
+		<mkdir dir="${build_classes}" />
+		
+		<echo message="start build dpl api" />
+
+		<echo message="compile" />
+		<javac destdir="${build_classes}" debug="true">
+			<classpath refid="class_path" />
+			<src path="${dpl_api_path}" />
+		</javac>
+
+		<echo message="build jar" />
+		<jar destfile="${build}/mostycity-dpl-api.jar">
+			<fileset dir="${build_classes}">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+		<delete dir="${build_classes}" />
+		<echo message="end build dpl api" />
+	</target>
+
+	<target name="build_web" depends="build_dpl_impl">
+		<echo message="start build_web" />
+		<mkdir dir="${build_classes}/WEB-INF/lib" />
+		<mkdir dir="${build_classes}/WEB-INF/classes" />
+
+		<echo message="compile" />
+		<javac srcdir="${web_path}" destdir="${build_classes}/WEB-INF/classes" classpathref="class_path" debug="true"/>
+
+		<echo message="copy files" />
+		<copy todir="${build_classes}">
+			<fileset dir="${web_project}/WebContent">
+				<exclude name="**/*.jar"/>
+			</fileset>
+		</copy>
+
+		<copy todir="${build_classes}/WEB-INF/classes">
+			<fileset dir="${dpl_impl_path}">
+				<include name="*.property" />
+				<include name="*.xml" />
+				<include name="*.properties"/>
+			</fileset>
+			<fileset dir="${web_path}">
+				<include name="*.property" />
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+
+		<copy todir="${build_classes}/WEB-INF/lib">
+			<fileset dir="${build}" />
+			<fileset dir="${lib_dir}">
+				<exclude name="**/javaee.jar"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${build_classes}/WEB-INF/classes">
+			<fileset dir="${html_pages}" />
+		</copy>
+
+		<war destfile="${build}/${project_name}.war" webxml="${build_classes}/WEB-INF/web.xml" >
+			<fileset dir="${build_classes}" />
+		</war>
+		<delete dir="${build_classes}" />
+		<echo message="end build web" />
+	</target>
+	<echo message="end build" />
+</project>

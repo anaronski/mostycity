@@ -1,0 +1,124 @@
+@CHARSET "UTF-8";
+
+#newsPanel .title {
+	font-size: 20px;
+	color: #006600;
+}
+#newsPanel .title a:hover, #newsPanel .title a:focus {
+	text-decoration: none;
+}
+#newsPanel p {
+	width: 100%;
+	margin: 0;
+}
+#newsPanel .newsItemImg {
+	float: left;
+	margin-right: 10px;
+}
+#newsPanel .newsItemImg img {
+	max-height: 200px;
+	max-width: 100%;	
+}
+#newsPanel .newsItem {
+	background: url("images/bg-content.png") repeat-x scroll 0 -3px transparent;
+}
+#newsPanel .newsItem.deleted {
+	background: none repeat scroll 0 0 #FFCCCC !important;
+}
+#newsPanel .title .deleted {
+	text-decoration: line-through;
+	color: gray;
+	background-color: #ffffff;
+}
+
+#newsPanel .bgGreenColor {
+	background-color: #CCFFCC;
+}
+#newsPanel .newsInfo {
+	font-size: 10px;
+	font-style: italic;
+	color: #999999;
+}
+
+#newsPanel .underDesc {
+	padding-bottom: 20px;
+}
+
+#newsPanel .shareTools {
+	display: inline-block;
+    margin-top: -5px;
+    position: absolute;
+    right: 15px;
+}
+
+#commentsPanel {
+/* 	padding-left: 30px !important; */
+/* 	width: 750px; */
+}
+#commentsPanel .commentsInfo {
+	font-size: 12px;
+	border-top: 1px solid #F1F1F1;
+}
+#commentsPanel .commentsInfo.first {
+	border-top: none;
+	padding-top: 10px;	
+}
+#commentsPanel .commentsInfo p {
+	margin-top: 5px;
+}
+#commentsPanel .date {
+	font-size: 10px;
+	color: #999999;
+	font-style: italic;
+	padding-right: 10px;
+}
+#commentsPanel .noComments {
+	color: #999999;
+	font-style: italic;
+	text-align: center;
+}
+#commentsPanel .showAllComments {
+	text-align: center;
+	color: #999999;
+	background-color: #eeeeee;
+	text-align: 12px; 
+	cursor: pointer;
+}
+#commentsPanel .showAllComments a{
+	color: #999999 !important;
+	text-decoration: none !important; 
+}
+#commentsPanel textarea {
+	border: 1px solid #99CC99;
+	width: 80%;
+	resize: none;
+}
+#commentsPanel .deleteLnk {
+	background-position: 10px 0;
+	color: #999999;
+	padding-left: 10px;
+	border-left: 1px solid;
+	font-size: 11px;
+	font-style: normal;
+}
+
+#newsItemPage ul {
+	margin-top: 0;
+	display: inline-block;
+	padding-left: 0px;
+}
+#newsItemPage li {
+	float: left;
+}
+#newsItemPage li a{
+	color: #999999;
+	font-size: 12px;
+	padding-right: 30px;
+}
+#newsItemPage #newsPanel .underDesc {
+	border-top: 1px solid #006600;
+}
+
+#newsItemErrorPage span {
+	font-weight: bold;
+}

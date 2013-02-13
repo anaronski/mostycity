@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<body>
+<wicket:extend>
+	<div id="confirmDeletePage">
+		<div class="warning"><b><span><wicket:message key="common.warning"/></span></b></div>
+		<div><p><wicket:message key="confirmDelete.mess1"/></p></div>
+		<div class="center"><span><wicket:message key="confirmDelete.mess2"/></span></div>
+		<div class="btn center">
+			<a wicket:id="cancelBtn" class="green_btn"><wicket:message key="common.button.no"/></a>
+			<a wicket:id="deleteAccBtn" class="green_btn"><wicket:message key="common.button.yes"/></a>
+		</div>
+	</div>
+</wicket:extend>
+</body>
+</html>

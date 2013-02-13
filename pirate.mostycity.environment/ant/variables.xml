@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<project name="variables">
+	<property file="build.properties" />
+	<target name="variables">
+		<path id="class_path">
+			<fileset dir="${lib_dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${build}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+	</target>
+</project>
