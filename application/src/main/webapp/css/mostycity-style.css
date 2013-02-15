@@ -1,0 +1,391 @@
+
+
+/* ----- main blocks ----- */
+
+body {
+	background-color: #ECEFF3;
+	margin: 0px;
+	padding: 0px;
+	direction: ltr;
+	font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+	font-size: 14px;
+}
+
+#output {
+	width: 80%;
+	min-width: 800px;
+	margin: 0 auto;
+	box-shadow: 0px 5px 20px 3px #777777;
+	border: 1px solid #999;
+	position: relative;
+}
+
+#main {
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 10px #777777 inset;
+	margin-top: 4px;
+}
+
+#footer {
+	text-align: center;
+	background: url("images/bg-footer.png") repeat scroll center 0 green;
+	height: 25px;
+	vertical-align: baseline;
+	box-shadow: 0px 0px 10px #777777 inset;
+}
+
+#mainContent {
+	width: 100%;
+	padding: 10px;
+}
+
+#mainPage #main {
+	padding: 30px 0;
+}
+
+
+
+/* ---- default ---- */
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited{
+	color: #006600;
+}
+
+a:hover, a:focus {
+	text-decoration: underline;
+	color: #F47D08;
+}
+
+a:link.grey, a:visited.grey {
+	text-decoration: none;
+	color: #999999;
+}
+
+a:link.green_btn, a:visited.green_btn {
+	background: url("images/bg-green_btn.png") repeat-x scroll 0 0 transparent;
+	color: #CCFFCC;
+	padding: 4px 17px;
+}
+
+*+html a:link.green_btn, +html a:visited.green_btn {
+	padding: 5px 17px;
+}
+
+a:hover.green_btn, a:focus.green_btn {
+	background-position: 20px 100%; 
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#lightBox a:LINK, .galleryPanel a:LINK {
+	color: #fff !important;
+}
+
+img {
+	border: none;
+}
+
+ul {
+	list-style: none;
+}
+
+td {
+	vertical-align: top;
+}
+
+form label {
+	color: #006600;
+	font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+	border: 1px solid #99CC99;
+	box-shadow: 0 0 2px #99CC99 inset;
+	padding: 1px 3px;
+	margin: 0 0 10px 10px;
+}
+
+input[type="submit"] {
+	padding: 4px 17px;
+	border: 0;
+	font-size: 14px;
+}
+
+.size-12 {
+	font-size: 12px;
+}
+
+.size-10 {
+	font-size: 10px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.right {
+	text-align: right;
+}
+
+.grey {
+	text-color: #999999;
+}
+
+.green {
+	text-color: #006600;
+}
+
+.green_btn {
+	background: url("images/bg-green_btn.png") repeat-x scroll 0 0 transparent;
+	color: #CCFFCC;
+	font-family: tahoma,arial,verdana,sans-serif,Lucida Sans;
+}
+
+.container-5 {
+	padding: 5px;
+}
+
+.container-20-5 {
+	padding: 20px 5px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.warning {
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+.info {
+	background-color: #006699;
+	color: white;
+	font-weight: bold;
+}
+.delete {
+	background: url("images/cross1.png") no-repeat 0 transparent;	
+}
+.deleted {
+	background-color: #FFCCCC;
+}
+.avatar {
+	max-width: 82px;
+	max-height: 82px;
+}
+.smallAvatar {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+}
+.smallAvatar img {
+	max-width: 60px;
+	max-height: 60px;
+}
+.bigAvatar img {
+	max-width: 300px;
+	max-height: 250px;
+}
+
+.star {
+	color: #CC0000;
+}
+
+.feedback {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+#loginPage .loginPanel input[type="text"], 
+#loginPage .loginPanel input[type="password"], 
+#forgetPasswordPage .loginPanel input[type="text"], 
+#forgetPasswordPage .loginPanel input[type="password"] {
+	width: 200px;
+}
+
+
+/* ---- header ---- */
+
+#header img {
+	width: 100%;
+}
+
+
+/* ---- header menu ---- */
+
+.headerMenu {
+	position: relative;
+	text-align: right;
+	list-style-position: inside;
+	height: 1.2em;
+	margin: -1.7em 0 0 0;
+	padding-right: 5px;
+}
+
+.headerMenu li {
+	float: right;
+	border-right: 1px solid snow;
+}
+
+.headerMenu a:link, .headerMenu a:visited {
+	color: #CCFFCC;
+	padding: 5px 14px;
+	font-weight: bold;
+	font-style: italic;
+	opacity: 0.7;
+	text-shadow: 0 0 2px #001100;
+}
+
+.headerMenu a:hover, .headerMenu a:focus {
+	color: #FFFFFF;
+	opacity: 0.9;	
+	text-decoration: none;
+}
+
+.headerMenu .last {
+	border-right: none;
+}
+
+/* ---- footer ----- */
+
+#footer .copyright {
+	font-style: italic;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 0 5px;
+	opacity: 0.8;
+}
+
+
+/* ---- left panel ---- */
+
+.leftPanel {
+	background-color: #FFFFFF;
+	box-shadow: 0 0 12px #BBBBBB inset;
+	width: 310px;
+	border-right: 1px solid #BBBBBB;
+}
+
+.leftPanel .section {
+	margin: 20px auto 0px;
+}
+
+/* ---- login panel ----  */
+
+.loginPanel {
+	width: 300px;
+	position: relative;
+	text-align: center;
+}
+
+.loginPanel .btn {
+	width: 250px;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.loginPanel label {
+	line-height: 1.7em;
+}
+
+.leftPanel .loginPanel {
+	width: 250px;
+}
+
+.leftPanel .loginPanel input[type="text"], 
+.leftPanel .loginPanel input[type="password"] {
+	width: 142px;
+}
+
+.leftPanel .loginPanel .btn {
+	width: 190px;
+}
+
+
+/* ---- welcome panel ---- */
+
+.welcomePanel .newMessagesCount {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 3em;
+	text-decoration: none;
+}
+.welcomePanel .newMessagesCount em {
+	color: #999999;
+}
+
+
+/* ---- gallery panel --- */
+
+.galleryPanel {
+	width: 250px;
+	height: 186px;
+	position: relative;
+	padding: 0 7px !important;
+}
+
+.galleryPanel .galleryList {
+	padding: 0;	
+	text-align: center;
+	width: 250px;
+	height: 186px;
+	position: absolute;
+}
+.galleryPanel .galleryList img {
+	max-height: 186px;
+	max-width: 250px;
+}
+
+
+/* ---- voting  ---- */
+
+.votingsListView {
+	color: #006600;
+	padding: 5px;
+}
+
+.votingsListView .question {
+	font-weight: bold;
+	color: #003300;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.votingsListView .variant {
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+.votingsListView .voting_info {
+	color: #999999;
+	font-size: 10px;
+	border-left: 1px solid;
+}
+
+.leftPanel .votingsListView .voting_info {
+	border-left: none;
+	border-top: 1px solid;
+	margin-bottom: 20px;
+	width: 80%;
+}
+
+
+/* ---- forget password page ----- */
+
+#forgetPasswordPage .loginPanel .btn {
+	width: 180px;
+	text-align: left;
+}
+
+
+/* ---- photogallery page ---- */
+
+#photogalleryPage #lightBox img{
+	max-height: 150px;
+	max-width: 170px;
+}
+

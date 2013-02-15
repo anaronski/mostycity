@@ -6,6 +6,6 @@
 #photogalleryPage #rightContent {
 /* 	margin-left: 300px;	 */
 }
-#lightBox a:LINK, #galleryPanel a:LINK {
+#lightBox a:LINK, .galleryPanel a:LINK {
 	color: #fff !important;
 }

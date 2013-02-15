@@ -125,7 +125,7 @@
 		</repository>
 	</repositories>
 	<build>
-		<finalName>mostycity</finalName>
+		<finalName>mostycity1</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -142,7 +142,7 @@
 				<configuration>
 					<url>http://localhost:8080/manager</url>
 					<server>TomcatServer</server>
-					<path>/mostycity</path>
+					<path>/mostycity1</path>
 				</configuration>
 			</plugin>
 		</plugins>

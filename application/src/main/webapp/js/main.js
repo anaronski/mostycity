@@ -75,11 +75,11 @@ function submitForm(){
 }
 
 function runGallery(){
-    $('#galleryPanel .galleryList:gt(0)').hide();
+    $('.galleryPanel .galleryList:gt(0)').hide();
     setInterval(function(){
-      $('#galleryPanel .galleryList:first-child').fadeOut(600)
+      $('.galleryPanel .galleryList:first-child').fadeOut(600)
          .next('.galleryList').fadeIn(600)
-         .end().appendTo('#galleryPanel');}, 
+         .end().appendTo('.galleryPanel');}, 
       5000);
 }
 

@@ -66,7 +66,9 @@ public class WelcomePanel extends Panel implements Constants{
 			}
 		};
 		
-		add(updating);
+		// TODO
+		
+//		add(updating);
 		
 		add(new Link<Void>("messagesLnk"){
 

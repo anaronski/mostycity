@@ -3,17 +3,17 @@
 	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
 <body>
 <wicket:panel>
-<div id="welcomePanel">
+<div class="welcomePanel">
 <table>
 	<tr>
-		<td>
+		<td class="container-5">
 		<div class="smallAvatar">
 			<a title="change avatar" wicket:id="changeAvatarLnk"><img wicket:id="avatar1" /></a>
 		</div>
 		</td>
-		<td>
+		<td class="container-5">
 			<div><span wicket:id="userName" /></div>
-			<div class="newMessagesCount"><a class="messagesLnk" wicket:id="messagesLnk"><wicket:message key="welcome.newMessages"/><span wicket:id="newMessCount"></span></a></div>
+			<div><a class="newMessagesCount" wicket:id="messagesLnk"><wicket:message key="welcome.newMessages"/>&nbsp;<span wicket:id="newMessCount"></span></a></div>
 		</td>
 	</tr>
 </table>

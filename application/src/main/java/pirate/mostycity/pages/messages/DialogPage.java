@@ -177,7 +177,8 @@ public class DialogPage extends MyCabinetMainPage{
 					
 			}
 		};
-		listViewContainer.add(updating);
+// TODO:
+//		listViewContainer.add(updating);
 		listViewContainer.add(listView);
 		
 		form.add(listViewContainer);
