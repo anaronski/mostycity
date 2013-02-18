@@ -336,7 +336,7 @@ div.send_btn:hover, div.send_btn:focus {
 }
 
 .headerMenu a:hover, .headerMenu a:focus {
-	color: #FFFFFF;
+	color: #FFFFFF !important;
 	opacity: 0.9;	
 	text-decoration: none;
 }
@@ -512,6 +512,15 @@ div.send_btn:hover, div.send_btn:focus {
 .registrationPanel .btn {
 	width: 205px;
 	margin-top: 20px;
+}
+
+
+/* ---- confirm reg page ---- */
+
+#confirmRegistrationPage {
+	max-width: 600px;
+	margin: 0px auto;
+	border: 1px solid;
 }
 
 
