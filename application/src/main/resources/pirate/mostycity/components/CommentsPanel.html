@@ -3,7 +3,7 @@
 	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
 <body>
 <wicket:panel>
-<div id="commentsPanel">
+<div class="commentsPanel">
 <form wicket:id="commentsForm">
 	<div wicket:id="showAllCommentsContainer" class="showAllComments">
 		<a id="commentsCountLink" wicket:id="showAllCommentsLink">
@@ -13,10 +13,10 @@
 	<div class="commentsInfo" wicket:id="commentsListView">
 		<table>
 		<tr>
-			<td align="center" valign="top">
+			<td align="center" valign="top" class="container-5">
 				<div class="smallAvatar"><a wicket:id="authorLnk1"><img wicket:id="avatar"/></a></div>
 			</td>
-			<td>
+			<td class="container-5">
 				<div><a wicket:id="authorLnk">
 					<span wicket:id="author"/></a>
 					<span wicket:id="commentItemDesc"/>
@@ -28,7 +28,7 @@
 		</table>
 	</div>
 	<div class="noComments"><span wicket:id="noCommentsLabel"/></div>
-	<div class="center">
+	<div class="newCommentForm">
 		<textarea rows="4" wicket:id="commentItemTxtTA" id="commentStr"></textarea>
 		<input type="submit" wicket:id="addNewCommentBtn" class="send_btn top" value="Send"/>
 	</div>

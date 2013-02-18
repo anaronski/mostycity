@@ -1,2 +1,2 @@
-call mvn clean install -DskipTests
+call mvn tomcat:redeploy -DskipTests
 pause

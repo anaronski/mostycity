@@ -36,7 +36,7 @@ body {
 
 #mainContent {
 	width: 100%;
-	padding: 10px;
+	padding: 10px 10px 20px 10px;
 }
 
 #mainPage #main {
@@ -51,18 +51,29 @@ a {
 	text-decoration: none;
 }
 
+p a:hover {
+	text-decoration: underline;
+}
+
 a:link, a:visited{
 	color: #006600;
 }
 
-a:hover, a:focus {
-	text-decoration: underline;
-	color: #F47D08;
+a:hover, a:focus,
+a:hover.grey, a:focus.grey,
+a.deleteLnk:hover, a.deleteLnk:focus,
+.grey a:hover, .grey a:focus {
+	text-decoration: none;
+	color: #F47D08 !important;
 }
 
 a:link.grey, a:visited.grey {
-	text-decoration: none;
 	color: #999999;
+}
+
+.grey a:LINK, .grey a:VISITED {
+	color: #999999;
+	font-size: 12px;
 }
 
 a:link.green_btn, a:visited.green_btn {
@@ -79,6 +90,19 @@ a:hover.green_btn, a:focus.green_btn {
 	background-position: 20px 100%; 
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+.delete {
+	background: url("images/cross1.png") no-repeat 0 transparent;	
+}
+
+a.deleteLnk:link, a.deleteLnk:visited {
+	background-position: 10px 0;
+	color: #999999;
+	padding-left: 10px;
+	border-left: 1px solid;
+	font-size: 11px;
+	font-style: normal;
 }
 
 #lightBox a:LINK, .galleryPanel a:LINK {
@@ -102,6 +126,12 @@ form label {
 	font-weight: bold;
 }
 
+textarea {
+	resize: none;
+	box-shadow: 0 0 10px #99CC99 inset;
+	padding: padding: 1px 3px;
+}
+
 input[type="text"], input[type="password"] {
 	border: 1px solid #99CC99;
 	box-shadow: 0 0 2px #99CC99 inset;
@@ -113,6 +143,11 @@ input[type="submit"] {
 	padding: 4px 17px;
 	border: 0;
 	font-size: 14px;
+}
+
+*+html input[type="submit"]{
+	padding: 3px 10px;
+	margin-bottom: -4px;
 }
 
 .size-12 {
@@ -145,12 +180,50 @@ input[type="submit"] {
 	font-family: tahoma,arial,verdana,sans-serif,Lucida Sans;
 }
 
+.green_btn:hover, .green_btn:focus {
+	background-position: 20px 100% !important; 
+	color: #FFFFFF !important;
+}
+
+input[type="submit"].send_btn, div.send_btn {
+	background: url("images/send_btn.png") repeat-x scroll 69px -7px transparent;
+	color: #CCFFCC;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 19px;
+	padding-top: 45px;
+	border: 0;
+	font-size: 14px;
+}
+
+input[type="submit"].send_btn:hover, input[type="submit"].send_btn:focus,
+div.send_btn:hover, div.send_btn:focus {
+	background-position: -4px -7px !important; 
+	color: #FFFFFF !important;
+}
+
+*+html input[type="submit"].send_btn {
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+@-moz-document url-prefix() {
+	input[type="submit"].send_btn{
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+}
+
 .container-5 {
 	padding: 5px;
 }
 
 .container-20-5 {
 	padding: 20px 5px;
+}
+
+.container-0-0-10-0 {
+	margin: 0 0 10px 0;
 }
 
 .center {
@@ -167,9 +240,7 @@ input[type="submit"] {
 	color: white;
 	font-weight: bold;
 }
-.delete {
-	background: url("images/cross1.png") no-repeat 0 transparent;	
-}
+
 .deleted {
 	background-color: #FFCCCC;
 }
@@ -197,14 +268,38 @@ input[type="submit"] {
 
 .feedback {
 	max-width: 700px;
-	margin: 0 auto;
+	margin: 0 auto 10px;
 }
 
-#loginPage .loginPanel input[type="text"], 
-#loginPage .loginPanel input[type="password"], 
-#forgetPasswordPage .loginPanel input[type="text"], 
-#forgetPasswordPage .loginPanel input[type="password"] {
-	width: 200px;
+.feedback div {
+	padding-bottom: 10px;
+}
+	
+.feedbackulERROR {
+	color: #FF6A6A;
+	font-weight: bold;
+	text-align: center;
+}
+.feedbackulINFO {
+	color: #009ACD;
+	text-align: center;
+	font-weight: bold;
+}
+
+.topBorder {
+	border-top: 1px solid;
+	border-color: #006600;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.top {
+	vertical-align: top;	
+}
+
+
+.pagination {
+	text-align: center;
 }
 
 
@@ -376,6 +471,11 @@ input[type="submit"] {
 
 /* ---- forget password page ----- */
 
+#forgetPasswordPage .loginPanel input[type="text"], 
+#forgetPasswordPage .loginPanel input[type="password"] {
+	width: 200px;
+}
+
 #forgetPasswordPage .loginPanel .btn {
 	width: 180px;
 	text-align: left;
@@ -388,4 +488,157 @@ input[type="submit"] {
 	max-height: 150px;
 	max-width: 170px;
 }
+
+
+/* ---- registration page ---- */
+
+.registrationPanel {
+	max-width: 530px;
+	position: relative;
+}
+
+.secondColl {
+	vertical-align: top;
+	position: absolute;
+	right: 5px;
+}
+
+.registrationPanel input[type="text"], 
+.registrationPanel input[type="password"] {
+	margin: 0 0 20px 0;
+	width: 200px;
+}
+
+.registrationPanel .btn {
+	width: 205px;
+	margin-top: 20px;
+}
+
+
+/* ---- login page ----  */
+
+#loginPage .loginPanel input[type="text"], 
+#loginPage .loginPanel input[type="password"] {
+	width: 200px;
+}
+
+
+/* ---- news panel ----  */
+
+.newsListView {
+	padding: 10px 5px 20px;
+}
+
+.newsPanel .title {
+	font-size: 20px;
+	color: #006600;
+	margin-bottom: 10px;
+}
+
+.newsPanel .newsInfo {
+	font-size: 11px;
+	font-style: italic;
+	color: #999999;
+	margin-bottom: 20px;
+}
+
+.newsPanel .newsInfo span {
+	padding: 0 12px 0 0;
+}
+
+.newsPanel .newsItemImg {
+	float: left;
+	margin-right: 15px;
+}
+
+.newsPanel .newsItemImg img {
+	max-height: 200px;
+	max-width: 100%;
+}
+
+.newsPanel p {
+	width: 100%;
+	margin-top: 0;
+}
+
+.newsPanel .newsItem {
+	background: url("images/bg-content.png") repeat-x scroll 0 -3px transparent;
+}
+
+.newsPanel .shareTools {
+	display: inline-block;
+	top: 0;
+	position: absolute;
+	right: 15px;
+}
+
+
+/* ---- news item page ---- */
+
+#newsItemPage .newsPanel .underDesc {
+	border-top: 1px solid #006600;
+	position: relative;
+}
+
+#newsItemPage .underDesc ul {
+	margin-top: 5px;
+	display: inline-block;
+	padding-left: 5px;
+}
+
+#newsItemPage .underDesc li {
+	float: left;
+	padding-right: 30px;
+}
+
+#newsItemPage .body {
+	overflow: hidden;
+	padding: 0 5px;
+}
+
+
+/* ---- comments panel ----- */
+
+.commentsPanel{
+	padding: 20px 10px 0;
+}
+
+.commentsPanel .commentsInfo {
+	font-size: 12px;
+	border-top: 1px solid #F1F1F1;
+}
+
+.commentsPanel .noComments {
+	color: #999999;
+	font-style: italic;
+	text-align: center;
+}
+
+.commentsPanel .commentsInfo.first {
+	border-top: none;
+	padding-top: 10px;
+}
+
+#commentsPanel .commentsInfo p {
+	margin-top: 5px;
+}
+
+.commentsPanel textarea {
+	border: 1px solid #99CC99;
+	width: 80%;
+	resize: none;
+}
+
+.commentsPanel .date {
+	font-size: 11px;
+	color: #999999;
+	font-style: italic;
+	padding-right: 10px;
+}
+
+.commentsPanel .newCommentForm{
+	text-align: center;
+	margin-top: 20px;
+}
+
 

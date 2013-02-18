@@ -6,7 +6,7 @@
 <wicket:extend>
 
 <div id="newsItemPage">
-	<div id="newsPanel">
+	<div class="newsPanel">
 	<form wicket:id="newsItemForm">
 		<div wicket:id="feedback" class="feedback"></div>
 		<div class="title"><span wicket:id="newsItemTitle"/></div>
@@ -17,7 +17,7 @@
 			<a wicket:id="lastUpdateAccountLnk" class="grey">
 			<span wicket:id="lastModAcc"/></a>
 		</div>
-		<div wicket:id="descPanel" style="overflow: hidden;">
+		<div wicket:id="descPanel" class="body">
 			<div>
 				<div class="newsItemImg">
 					<a wicket:id="linkToImage">
@@ -34,21 +34,21 @@
 			<li><a wicket:id="onHome"><wicket:message key="news.onHome"/></a></li>
 			<li><a wicket:id="fromHome"><wicket:message key="news.fromHome"/></a></li>
 		</ul>
-		<div class="shareTools">
-			<span class='st_email'></span>
-			<span class='st_vkontakte' ></span>
-			<span class='st_odnoklassniki'></span>
-			<span class='st_facebook'></span>
-			<span class='st_twitter'></span>
-			<span class='st_livejournal'></span>
-		</div>
+<!-- 		<div class="shareTools"> -->
+<!-- 			<span class='st_email'></span> -->
+<!-- 			<span class='st_vkontakte' ></span> -->
+<!-- 			<span class='st_odnoklassniki'></span> -->
+<!-- 			<span class='st_facebook'></span> -->
+<!-- 			<span class='st_twitter'></span> -->
+<!-- 			<span class='st_livejournal'></span> -->
+<!-- 		</div> -->
 		
-			<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-			<div class="yashare-auto-init " data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj"></div> 
+<!-- 			<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script> -->
+<!-- 			<div class="yashare-auto-init " data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj"></div>  -->
 		</div>
 	</form>
 	</div>
-	<span id="commentsPanel" wicket:id="commentsPanel"/>
+	<span wicket:id="commentsPanel"/>
 </div>
 </wicket:extend>
 </body>
