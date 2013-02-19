@@ -21,13 +21,13 @@
 			</div>
 			<div class="leftDir">
 				<div class="login"><a wicket:id="newMessageLnk" title="send message"><span wicket:id="login"/></a></div>
-				<div class="grey">
-					<span><wicket:message key="common.status"/> </span><span wicket:id="status"/>&nbsp;&nbsp;&nbsp;
-<!-- 					<span wicket:id="status"/>&nbsp;&nbsp;&nbsp; -->
-					<span wicket:id="type"/>&nbsp;&nbsp;&nbsp;
-					<span wicket:id="newsCount"/>&nbsp;&nbsp;&nbsp;
-					<span wicket:id="accountId"/>
-				</div>
+				<ul class="system-info">
+					<li><span><wicket:message key="common.status"/> </span><span wicket:id="status"/></li>
+<!-- 					<span wicket:id="status"/> -->
+					<li><span wicket:id="type"/></li>
+					<li><span wicket:id="newsCount"/></li>
+					<li><span wicket:id="accountId"/></li>
+				</ul>
 				<div>
 					<span class="label" wicket:id="firstNameLabel"/><span wicket:id="firstName"/><br/>
 					<span class="label" wicket:id="lastNameLabel"/><span wicket:id="lastName"/>
@@ -39,17 +39,17 @@
 					<span class="label" wicket:id="isqLabel"/><span wicket:id="isq"/><br/>
 					<span class="label" wicket:id="skypeLabel"/><span wicket:id="skype"/><br/>
 					<span class="label" wicket:id="vkontakteLabel"/><span wicket:id="vkontakte"/><br/>
-					<div wicket:id="userAuthPanel" class="grey">
+					<div wicket:id="userAuthPanel" class="grey size-12">
 						<wicket:message key="common.password"/>: <span wicket:id="password"/>
 					</div>
 				</div>
 			</div>
-			<div wicket:id="editButtons" class="editButtons">
-				<ul>
-					<li><a wicket:id="activateBtn"><wicket:message key="accountInfo.activate"/></a></li>
-					<li><a wicket:id="deactivateBtn"><wicket:message key="accountInfo.deactivate"/></a></li>
+			<div wicket:id="editButtons" class="underDesc">
+				<ul class="system-command">
 					<li><a wicket:id="editBtn"><wicket:message key="common.edit"/></a></li>
-					<li><a wicket:id="deleteBtn" class="delete"><span style="margin-left: 15px;"><wicket:message key="common.delete"/></span></a></li>
+					<li><a wicket:id="deleteBtn" class="delete"><span><wicket:message key="common.delete"/></span></a></li>
+					<li class="last"><a wicket:id="activateBtn"><wicket:message key="accountInfo.activate"/></a></li>
+					<li><a wicket:id="deactivateBtn"><wicket:message key="accountInfo.deactivate"/></a></li>
 				</ul>
 			</div>
 			</div>

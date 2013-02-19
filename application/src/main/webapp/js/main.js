@@ -43,20 +43,18 @@ $(document).ready(function(){
 function resize(){
 	if ($('#output').width()<1100){
 		if($.browser.msie && parseInt($.browser.version, 10) == 7){
-			$("#myCabinetMenu").css('top', '-20px');
+			$("#myCabinetMenu").css('margin-top', '0px');
 		}else{
-			$("#myCabinetMenu").css('top', '-30px');
+			$("#myCabinetMenu").css('margin-top', '0px');
 		}
 	   
-	   $("#myCabinetPage").css('margin-top', '20px');
 	   $("#myCabinetPage .rightDiv").css('position', 'relative');
 	}else{
 		if($.browser.msie && parseInt($.browser.version, 10) == 7){
-			$("#myCabinetMenu").css('top', '-40px');
+			$("#myCabinetMenu").css('margin-top', '-52px');
 		}else{
-			$("#myCabinetMenu").css('top', '-50px');
+			$("#myCabinetMenu").css('margin-top', '-52px');
 		}
-		$("#myCabinetPage").css('margin-top', '0px');
 		$("#myCabinetPage .rightDiv").css('position', 'absolute');
 	}
 	

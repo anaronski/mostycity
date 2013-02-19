@@ -10,13 +10,16 @@
 	<form wicket:id="newsItemForm">
 		<div wicket:id="feedback" class="feedback"></div>
 		<div class="title"><span wicket:id="newsItemTitle"/></div>
-		<div class="newsInfo"><wicket:message key="common.author"/><a wicket:id="authorLnk" class="grey">
-			<span wicket:id="author"/></a>&nbsp;&nbsp;&nbsp;
-			<span wicket:id="createTs"/>&nbsp;&nbsp;&nbsp; 
-			<span wicket:id="viewedCount"/>&nbsp;&nbsp;&nbsp;
-			<a wicket:id="lastUpdateAccountLnk" class="grey">
-			<span wicket:id="lastModAcc"/></a>
-		</div>
+		<ul class="system-info">
+			<li>
+				<wicket:message key="common.author"/>
+				<a wicket:id="authorLnk" class="grey"><span wicket:id="author"/></a>
+			</li>
+			<li><span wicket:id="createTs"/></li>
+			<li><span wicket:id="viewedCount"/></li>
+			<li><a wicket:id="lastUpdateAccountLnk" class="grey">
+			<span wicket:id="lastModAcc"/></a></li>
+		</ul>
 		<div wicket:id="descPanel" class="body">
 			<div>
 				<div class="newsItemImg">
@@ -28,9 +31,9 @@
 			</div>
 		</div>
 		<div class="underDesc">
-		<ul class="grey">
+		<ul class="system-command">
 			<li><a wicket:id="edit"><wicket:message key="common.edit"/></a></li>
-			<li><a wicket:id="delete" class="delete"><span style="margin-left: 15px;"><wicket:message key="common.delete"/></span></a></li>
+			<li><a wicket:id="delete" class="delete"><span><wicket:message key="common.delete"/></span></a></li>
 			<li><a wicket:id="onHome"><wicket:message key="news.onHome"/></a></li>
 			<li><a wicket:id="fromHome"><wicket:message key="news.fromHome"/></a></li>
 		</ul>

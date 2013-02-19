@@ -7,18 +7,21 @@
 	<form wicket:id="newsForm">
 		<div class="newsListView" wicket:id="newsListView">
 			<div class="title"><a wicket:id="newsItemLink"><span wicket:id="newsItemTitle"/></a></div>
-			<div class="newsInfo"><wicket:message key="common.author"/> <a wicket:id="authorLnk" class="grey">
-				<span wicket:id="author"/></a>
-				<span wicket:id="createTs"/>
-				<span wicket:id="viewedCount"/>
+			<div class="system-info">
+				<span class="item">
+					<wicket:message key="common.author"/> <a wicket:id="authorLnk" class="grey">
+					<span wicket:id="author"/></a>
+				</span>
+				<span class="item" wicket:id="createTs"/>
+				<span class="item" wicket:id="viewedCount"/>
 			</div>
 			<div style="overflow: hidden;">
 				<div class="newsItemImg" wicket:id="newsItemImage"/>
 				<div wicket:id="newsItemDesc"/>
 			</div>
-			<div class="underDesc size-12">
-				<a class="grey topBorder" wicket:id="commentsLink"><span wicket:id="commentsCount"></span></a>
-			</div>
+			<ul class="system-command">
+				<li><a class="grey topBorder" wicket:id="commentsLink"><span wicket:id="commentsCount"></span></a></li>
+			</ul>			
 		</div>
 		<div wicket:id="pagingNavigator" class="pagination"/>
 	</form>

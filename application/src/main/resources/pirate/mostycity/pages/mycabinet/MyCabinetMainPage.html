@@ -4,9 +4,8 @@
 <body>
 <wicket:extend>
 	<div id="myCabinetPage">
-		<div><wicket:child /></div>
 		<div id="myCabinetMenu">
-			<ul class="dropdown headerMenu">
+			<ul class="dropdown myCabinetMenu">
 				<li><a wicket:id="accInfoLnk"><span><wicket:message key="myCabinet.menu.accountInfo"/></span></a></li>
 				<li>
 					<a wicket:id="updateAccLnk"><span><wicket:message key="myCabinet.menu.editAcc"/></span></a>
@@ -27,6 +26,7 @@
 				</li>
 			</ul>
 		</div>
+		<div><wicket:child /></div>
 	</div>
 </wicket:extend>
 </body>

@@ -6,7 +6,7 @@
 <div class="commentsPanel">
 <form wicket:id="commentsForm">
 	<div wicket:id="showAllCommentsContainer" class="showAllComments">
-		<a id="commentsCountLink" wicket:id="showAllCommentsLink">
+		<a id="commentsCountLink" class="grey" wicket:id="showAllCommentsLink">
 			<div>Show All <span wicket:id="commentsCount"></span> comments</div>
 		</a>
 	</div>
@@ -18,9 +18,12 @@
 			</td>
 			<td class="container-5">
 				<div><a wicket:id="authorLnk">
-					<span wicket:id="author"/></a>
+					<span class="bold" wicket:id="author"/></a>
 					<span wicket:id="commentItemDesc"/>
-					<div class="date"><span class="date" wicket:id="createTs"/><span><a class="deleteLnk delete" wicket:id="deleteLnk"><span style="margin-left: 15px;">delete</span></a></span></div>
+					<div class="system-info">
+						<span class="date item" wicket:id="createTs"/>
+						<span class="item"><a class="delete grey" wicket:id="deleteLnk">delete</a></span>
+					</div>
 				</div>
 				
 			</td>
