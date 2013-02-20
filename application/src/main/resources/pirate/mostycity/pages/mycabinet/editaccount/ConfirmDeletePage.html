@@ -3,11 +3,13 @@
 	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
 <body>
 <wicket:extend>
-	<div id="confirmDeletePage">
-		<div class="warning"><b><span><wicket:message key="common.warning"/></span></b></div>
-		<div><p><wicket:message key="confirmDelete.mess1"/></p></div>
-		<div class="center"><span><wicket:message key="confirmDelete.mess2"/></span></div>
-		<div class="btn center">
+	<div id="confirmDeletePage" class="center container-5">
+		<div class="warning container-5"><b><span><wicket:message key="common.warning"/></span></b></div>
+		<div class="container-5">
+			<div><p><wicket:message key="confirmDelete.mess1"/></p></div>
+			<div class="text-center"><span><wicket:message key="confirmDelete.mess2"/></span></div>
+		</div>
+		<div class="btn text-center container-10">
 			<a wicket:id="cancelBtn" class="green_btn"><wicket:message key="common.button.no"/></a>
 			<a wicket:id="deleteAccBtn" class="green_btn"><wicket:message key="common.button.yes"/></a>
 		</div>

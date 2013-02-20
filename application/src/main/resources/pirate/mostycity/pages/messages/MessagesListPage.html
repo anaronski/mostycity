@@ -6,11 +6,11 @@
 	<div id="messagesListPage">
 <!--		<div wicket:id="feedback" class="feedback"></div>-->
 		<form wicket:id="messagesListForm">
-			<div wicket:id="messagesListView" style="position: relative;" class="dialog">
+			<div wicket:id="messagesListView" class="dialog">
 			<a class="messageLnk" wicket:id="linkToDialog"/>
 			<table width="100%">
 				<tr>
-					<td align="center" valign="top">
+					<td class="text-center" valign="top">
 						<div class="smallAvatar"><img wicket:id="avatar"/></div>
 					</td>
 					<td width="100%">
@@ -18,7 +18,7 @@
 							<div wicket:id="underMessage" class="underMessage">
 								<span class="date" wicket:id="createTs"/>
 							</div>
-							<span style="color: #006600; font-weight: bold;" wicket:id="author"/>
+							<span class="author" wicket:id="author"/>
 							<span wicket:id="messageDesc" class="messageDesc"/>
 							
 						</div>

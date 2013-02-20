@@ -152,14 +152,14 @@ form label {
 	font-weight: bold;
 }
 
-input[type="text"], input[type="password"], textarea, select { 
+input[type="text"], input[type="password"], textarea, select, .editable  { 
     outline: none;
     border: 1px solid #99CC99;
     padding: 1px 3px;
     margin: 0 0 20px 0px;
 }
 
-textarea {
+textarea, .editable  {
 	resize: none;
 	box-shadow: 0 0 10px #99CC99 inset;
 }
@@ -177,6 +177,13 @@ input[type="submit"] {
 *+html input[type="submit"]{
 	padding: 3px 10px;
 	margin-bottom: -4px;
+}
+
+.date {
+	font-size: 11px;
+	color: #999999;
+	font-style: italic;
+	padding-right: 10px;
 }
 
 .underDesc {
@@ -237,6 +244,7 @@ input[type="submit"].send_btn, div.send_btn {
 	padding-top: 45px;
 	border: 0;
 	font-size: 14px;
+	cursor: pointer;
 }
 
 input[type="submit"].send_btn:hover, input[type="submit"].send_btn:focus,
@@ -271,6 +279,10 @@ div.send_btn:hover, div.send_btn:focus {
 
 .center {
 	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .warning {
@@ -548,10 +560,14 @@ div.send_btn:hover, div.send_btn:focus {
 	position: relative;
 }
 
+.registrationPanel .dataFields {
+	min-height: 280px;
+}
+
 .secondColl {
 	vertical-align: top;
 	position: absolute;
-	right: 5px;
+	right: 0px;
 }
 
 .registrationPanel input[type="text"], 
@@ -688,7 +704,7 @@ div.send_btn:hover, div.send_btn:focus {
 	width: 80%;
 }
 
-.commentsPanel .date {
+.date {
 	font-size: 11px;
 	color: #999999;
 	font-style: italic;
@@ -755,13 +771,17 @@ div.send_btn:hover, div.send_btn:focus {
 
 #myCabinetMenu {
 	min-width: 500px;
+	margin-bottom: 50px;
+	display: inline-block;
+	z-index: 10;
+	position: relative;
 }
 
 .myCabinetMenu {
 	position: relative;
 	list-style-position: inside;
 	height: 1.2em;
-	margin: 0 0 35px 0;
+	margin: 0;
 	padding: 0px;
 }
 
@@ -773,8 +793,7 @@ div.send_btn:hover, div.send_btn:focus {
 .myCabinetMenu ul.secondLevel {
 	margin-top: 8px;
 	position: absolute;
-	padding-left: 0px;
-	padding-bottom: 0px;
+	padding: 0px;
 	background-color: white;
 	border-bottom: 1px solid;
 	border-left: 1px solid;
@@ -787,7 +806,6 @@ div.send_btn:hover, div.send_btn:focus {
 .myCabinetMenu .secondLevel li{
 	float:none;
 	padding: 5px 3px;
-	margin-left: 0px;
 }
 
 .myCabinetMenu a:link, .myCabinetMenu a:visited {
@@ -808,5 +826,152 @@ div.send_btn:hover, div.send_btn:focus {
 .myCabinetMenu .last {
 	border-right: none;
 }
+
+
+/* ---- change avatar page ---- */
+
+.changeAvatarForm div {
+	margin-bottom: 15px;
+}
+
+
+/* ---- change password page ---- */
+
+.changePasswordForm {
+	width: 250px;
+}
+
+#changePasswordPage input[type="password"] {
+	width: 240px;
+}
+
+
+/* ---- confirm delete page ---- */
+
+#confirmDeletePage {
+	max-width: 600px;
+	min-width: 430px;
+	border: 1px solid;
+}
+
+
+
+/* ----- message list page ---- */
+
+#messagesListPage .dialog {
+	cursor: pointer;
+	position: relative;
+}
+
+#messagesListPage .dialog.hover {
+	background-color: #EDF1F5;
+}
+
+.dialog {
+	padding: 10px;
+}
+
+.underMessage .date {
+	padding-left: 40px;
+	font-size: 12px;
+	line-height: 2.1em;
+}
+
+#messagesListPage .smallAvatar {
+	margin-right: 10px;
+}
+
+a.messageLnk:link {
+	z-index: 10;
+}
+
+.underMessage {
+	background-color: #FFFFFF;
+	background: url("images/message.png") no-repeat 0 0 transparent;
+	float: right;
+	margin: -5px 25px;
+}
+
+.underMessage.incomming {
+	background-position: 0 0;
+}
+
+.underMessage.new {
+	background-position: 0 -65px;
+}
+
+.underMessage.sent {
+	background-position: 0 -32px;
+}
+
+.messageDesc p {
+	max-height: 2em;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+.deleteDiv {
+	position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+.border {
+	border-top: 1px solid #EFEFEF;
+}
+
+.dialog .author {
+	font-weight: bold;
+	color: #006600;
+}
+
+
+/* ---- message page ----  */
+
+#messagePage .messagesHistory {
+	max-height: 400px;
+	overflow: auto;
+}
+
+.sendMessageFormPanel {
+	position: relative;
+}
+
+.editable {
+	width: 67%;
+	display: inline-block;
+	position: relative;
+	margin-left: 5px;
+}
+
+.editableDiv {
+	height: 75px !important;
+	overflow: auto;
+	margin-right: 20px;
+	outline: none;
+	padding: 1px 3px;
+}
+
+.sendMessageFormPanel .smilesPanel {
+	left: 88px;
+	position: absolute;
+	top: -214px;
+}
+
+.sendMessageFormPanel div.send_btn {
+	display: inline-block;
+}
+
+#smilesPanel {
+	width: 313px;
+	position: absolute;
+	background: #fff;
+	border: 1px solid;
+	max-height: 200px;
+	overflow: auto;
+	padding: 5px;
+}
+
 
 

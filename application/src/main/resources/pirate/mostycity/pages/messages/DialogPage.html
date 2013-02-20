@@ -37,28 +37,22 @@
 		<form wicket:id="messagesHistoryListForm">
 			<div id="messagesHistory" class="messagesHistory">
 				<div wicket:id="listViewContainer">
-				<div wicket:id="messagesHistoryListView" class="messagesHistoryListView">
-					<table width="100%"> 
-						<tr>
-							<td width="100%">
-								<div>
-									<div wicket:id="underMessage" class="underMessage">
-										<span class="date" wicket:id="createTs"/>
-										<span><a class="deleteLnk delete" wicket:id="deleteLnk"><span style="padding-left: 15px;"></span></a></span>
-									</div>
-									<a wicket:id="authorLnk"><span style="font-weight: bold;" wicket:id="author"/></a>
-									<span wicket:id="messageDesc"/>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="noMessages"><span wicket:id="noMessagesLabel"/></div>
+					<div wicket:id="messagesHistoryListView" class="dialog">
+						<div>
+							<div wicket:id="underMessage" class="underMessage">
+								<span class="date" wicket:id="createTs"/>
+								<span><a class="deleteLnk delete" wicket:id="deleteLnk"><span style="padding-left: 15px;"></span></a></span>
+							</div>
+							<a wicket:id="authorLnk"><span style="font-weight: bold;" wicket:id="author"/></a>
+							<span wicket:id="messageDesc"/>
+						</div>
+					</div>
+					<div class="noMessages"><span wicket:id="noMessagesLabel"/></div>
 				</div>
 			</div>
 <!-- 			<div wicket:id="pagingNavigator" class="center"/> -->
 			<div>
-				<div style="float: left; margin-top: 5px;">
+				<div style="float: left;">
 					<a wicket:id="authorLnk1"><img wicket:id="avatar" alt="" class="avatar"/></a>
 				</div>
 				<div>
